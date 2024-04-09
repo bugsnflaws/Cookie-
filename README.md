@@ -1,4 +1,16 @@
 # Cookie-
-Random Fortune Cookie Generator
+import random
 
-This Python project implements a simple fortune cookie generator using the random.randint() function. With each run, it generates a random lucky number between 1 and 100 and selects a fortune message from a pool of three possibilities. The fortune messages range from optimistic predictions of having a great day to more whimsical predictions like getting married within the year. This project serves as a fun and light-hearted way to start your day with a random fortune!
+lucky_number = random.randint(1, 100)
+
+fortune_number = random.randint(1, 3)
+fortune_text = ' '
+
+if fortune_number == 1:
+    fortune_text = "You will have a great day"
+if fortune_number == 2:
+    fortune_text = "Today will be tough! But it will be worth it"
+if fortune_number == 3:
+    fortune_text = "You will get married this year"
+
+print(f"{fortune_text} Your lucky number is: {lucky_number}")
